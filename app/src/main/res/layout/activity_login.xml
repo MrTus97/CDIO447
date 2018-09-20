@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.view.LoginActivity"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/margin_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imvLoginAct_Logo"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/login.imv.content.logoapp" />
+        <EditText
+            android:id="@+id/edtLoginAct_Username"
+            android:hint="@string/login.edt.hint.username"
+            android:drawableLeft="@drawable/ic_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+
+            android:drawableStart="@drawable/ic_email" />
+        <EditText
+            android:id="@+id/edtLoginAct_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login.edt.hint.password"
+            android:drawableLeft="@drawable/ic_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:drawableStart="@drawable/ic_password" />
+        <Button
+            android:layout_marginTop="@dimen/margin_medium"
+            android:id="@+id/btnLoginAct_SignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowRadius="30"
+            android:text="@string/login.btn.hint.signin"
+            android:textAlignment="center"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+
+</ScrollView>
