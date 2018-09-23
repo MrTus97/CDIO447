@@ -71,10 +71,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             edtPassword.setError(getString(R.string.login_error_thisFiledIsNotNull));
             return edtPassword;
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(edtUsername.getText().toString()).matches()){
-            edtUsername.setError(getString(R.string.login_error_wrongFormat));
-            return edtUsername;
-        }
+//        if (!Patterns.EMAIL_ADDRESS.matcher(edtUsername.getText().toString()).matches()){
+//            edtUsername.setError(getString(R.string.login_error_wrongFormat));
+//            return edtUsername;
+//        }
         if (!Validate.isPatternPasswordLength(edtPassword.getText().toString())){
             edtPassword.setError(getString(R.string.login_error_lengthPassword));
             return edtPassword;
