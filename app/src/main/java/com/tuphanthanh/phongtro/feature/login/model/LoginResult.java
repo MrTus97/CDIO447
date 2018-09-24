@@ -1,4 +1,4 @@
-package com.tuphanthanh.phongtro.login.model;
+package com.tuphanthanh.phongtro.feature.login.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

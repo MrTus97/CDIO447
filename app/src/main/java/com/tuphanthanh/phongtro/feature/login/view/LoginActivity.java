@@ -1,18 +1,19 @@
-package com.tuphanthanh.phongtro.login.view;
+package com.tuphanthanh.phongtro.feature.login.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.tuphanthanh.phongtro.R;
-import com.tuphanthanh.phongtro.login.presenter.ILoginPresenter;
-import com.tuphanthanh.phongtro.login.presenter.LoginPresenter;
+import com.tuphanthanh.phongtro.feature.home.view.HomeActivity;
+import com.tuphanthanh.phongtro.feature.login.presenter.LoginPresenter;
+import com.tuphanthanh.phongtro.ultils.Constant;
 import com.tuphanthanh.phongtro.ultils.Validate;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener,ILoginActivity {
@@ -84,9 +85,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void loginSuccess() {
-        Toast.makeText(this,"success",Toast.LENGTH_SHORT).show();
         Log.d(TAG,"login success");
-
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.putExtra(Constant.EXTRA_LOGIN_TO_HOME_USER,edtUsername.getText().toString());
+        startActivity(intent);
     }
 
     @Override

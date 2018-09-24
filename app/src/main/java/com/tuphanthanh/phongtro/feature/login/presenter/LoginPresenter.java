@@ -1,13 +1,15 @@
-package com.tuphanthanh.phongtro.login.presenter;
+package com.tuphanthanh.phongtro.feature.login.presenter;
 
 import com.tuphanthanh.phongtro.api.ApiClient;
 import com.tuphanthanh.phongtro.api.ApiInterface;
-import com.tuphanthanh.phongtro.login.model.LoginResult;
-import com.tuphanthanh.phongtro.login.view.LoginActivity;
+import com.tuphanthanh.phongtro.feature.login.model.LoginResult;
+import com.tuphanthanh.phongtro.feature.login.view.LoginActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.tuphanthanh.phongtro.ultils.Constant.apiService;
 
 public class LoginPresenter implements ILoginPresenter {
     private LoginActivity loginActivity;
@@ -17,7 +19,6 @@ public class LoginPresenter implements ILoginPresenter {
 
     @Override
     public void login(String email, String password) {
-        final ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<LoginResult> call = apiService.login(email, password);
         call.enqueue(new Callback<LoginResult>() {
             @Override

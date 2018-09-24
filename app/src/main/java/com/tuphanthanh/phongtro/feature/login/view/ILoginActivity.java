@@ -1,4 +1,4 @@
-package com.tuphanthanh.phongtro.login.view;
+package com.tuphanthanh.phongtro.feature.login.view;
 
 public interface ILoginActivity {
     public void loginSuccess();
